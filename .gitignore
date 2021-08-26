@@ -1,0 +1,8 @@
+**/__pycache__
+**/.ipynb_checkpoints
+**/*.pyc
+*.idea
+**/*.pth.tar
+**/*.pth
+admin/local.py
+pretrained_networks/*
