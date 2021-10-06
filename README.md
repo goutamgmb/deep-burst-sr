@@ -1,4 +1,4 @@
-# DBSR
+# Deep-Burst-SR
 
 Official implementation of [**Deep Burst Super-Resolution**](https://arxiv.org/pdf/2101.10997.pdf)
 
