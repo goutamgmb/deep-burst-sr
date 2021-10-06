@@ -2,6 +2,8 @@
 
 Official implementation of [**Deep Burst Super-Resolution**](https://arxiv.org/pdf/2101.10997.pdf)
 
+**News:** The complete training code is available now!
+
 **Publication:** Deep Burst Super-Resolution. Goutam Bhat, Martin Danelljan, Luc Van Gool, and Radu Timofte. CVPR 2021 
 [[Arxiv](https://arxiv.org/pdf/2101.10997.pdf)]
 
