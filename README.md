@@ -53,6 +53,7 @@ datasets etc. Update the paths in [local.py](admin/local.py) according to your l
 
 ## Toolkit Overview
 The toolkit consists of the following sub-modules.  
+ - [actors](actors): Contains the actor classes for different trainings. The actor class is responsible for passing the input data through the network can calculating losses.
  - [admin](admin): Includes functions for loading networks, tensorboard etc. and also contains environment settings.  
  - [data](data): Contains functions for generating synthetic bursts, camera pipeline, processing data (e.g. loading images, data augmentations).
  - [data_specs](data_specs): Information about train/val splits of different datasets.
@@ -60,6 +61,8 @@ The toolkit consists of the following sub-modules.
  - [evaluation](evaluation): Scripts to run and evaluate models on standard datasets. 
  - [external](external): External dependencies, e.g. [PWCNet](https://github.com/sniklaus/pytorch-pwc).  
  - [models](models): Contains different layers and network definitions.  
+ - [train_settings](train_settings): Default training settings for different models.
+ - [trainers](trainers): The main class which runs the training.
  - [util_scripts](util_scripts): Util scripts to e.g. download datasets.  
  - [utils](utils): General utility functions for e.g. plotting, data type conversions, loading networks.
 
@@ -263,8 +266,23 @@ described in [DBSR paper](https://arxiv.org/pdf/2101.10997.pdf).
 </details>
 
 ## Training 
-We are still waiting for approval from our project sponsors to release the training codes. Hopefully we can soon release it. 
-Meanwhile, please free to contact us in case of any questions regarding training.
+You can train the models using the [run_training.py](run_training.py) script. 
+Please download and set up the necessary datasets as described in Datasets section, before starting the trainings. You will 
+also need a pre-trained PWC-Net model to start the trainings. The model is automatically downloaded from 
+the `install.sh` script. You can also download it manually using
+
+```
+gdown https://drive.google.com/uc\?id\=1s11Ud1UMipk2AbZZAypLPRpnXOS9Y1KO -O pretrained_networks/pwcnet-network-default.pth
+```
+
+You can train a DBSR model on the SyntheticBurst dataset using default parameter settings using the following command
+```
+python run_training.py dbsr default_synthetic
+```
+In order to fine-tune DBSR model trained on SyntheticBurst dataset on the real-world BurstSR dataset, use the following command
+```
+python run_training.py dbsr default_realworld
+```
 
 ## Acknowledgement
 The toolkit uses code from the following projects:
