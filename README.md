@@ -2,7 +2,9 @@
 
 Official implementation of [**Deep Burst Super-Resolution**](https://arxiv.org/pdf/2101.10997.pdf)
 
-**News:** The complete training code is available now!
+**News:**
+- The code for our ICCV 2021 oral paper ["Deep Reparametrization of Multi-Frame Super-Resolution and Denoising"](https://arxiv.org/pdf/2108.08286.pdf) is now available at [goutamgmb/deep-rep](https://github.com/goutamgmb/deep-rep) 
+- The complete training code is available now!
 
 **Publication:** Deep Burst Super-Resolution. Goutam Bhat, Martin Danelljan, Luc Van Gool, and Radu Timofte. CVPR 2021 
 [[Arxiv](https://arxiv.org/pdf/2101.10997.pdf)]
