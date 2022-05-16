@@ -246,6 +246,9 @@ class BurstSRVis():
             r1 = r1 + self.title_pad
             r2 = r1 + im.shape[0]
             c2 = c1 + im.shape[1]
+
+            if im.ndim == 2:
+                im = np.expand_dims(im, -1)
             disp_image[r1:r2, c1:c2, :] = im
 
             r1 = r1 + 20     # -8
