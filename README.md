@@ -81,7 +81,7 @@ The RGB images from the training split of the
 [Zurich RAW to RGB mapping dataset](http://people.ee.ethz.ch/~ihnatova/pynet.html#dataset) 
 can be used to generate synthetic bursts for training using the `SyntheticBurstProcessing` class in [data/processing.py](data/processing.py).
 
-**Preparation:** Download the Zurich RAW to RGB canon set from [here](https://data.vision.ee.ethz.ch/bhatg/zurich-raw-to-rgb.zip) and unpack the zip folder. Set the 
+**Preparation:** Download the Zurich RAW to RGB canon set from [here](https://drive.google.com/file/d/12L0LYhG78zQBLkIDyFNE5J6fIH02NUgz/view?usp=drive_link) and unpack the zip folder. Set the 
 `zurichraw2rgb_dir` variable in [admin/local.py](admin/local.py) to point to the unpacked dataset directory.
 
 </details>
@@ -93,7 +93,7 @@ The pre-generated synthetic validation set used for evaluating the models. The d
 14 RAW images. The synthetic bursts are generated from the RGB images from the test split of the Zurich RAW to RGB mapping dataset. 
 The dataset can be loaded using `SyntheticBurstVal` class in [dataset/synthetic_burst_val_set.py](dataset/synthetic_burst_val_set.py) file.
 
-**Preparation:**  Downloaded the dataset [here](https://data.vision.ee.ethz.ch/bhatg/SyntheticBurstVal.zip) and unpack the zip file. 
+**Preparation:**  Downloaded the dataset [here](https://drive.google.com/file/d/1DHu3-_tGSc_8Wwwu6sHFaPtmd9ymd0rZ/view?usp=drive_link) and unpack the zip file. 
 Set the `synburstval_dir` variable in [admin/local.py](admin/local.py) to point to the unpacked dataset directory.
 
 
@@ -108,23 +108,12 @@ The dataset can be loaded using `BurstSRDataset` class in [dataset/burstsr_datas
 Please check the [DBSR paper](https://arxiv.org/pdf/2101.10997.pdf) for more details.
 
 
-**Preparation:** The dataset has been split into 10 parts and can be downloaded and unpacked using the 
-[util_scripts/download_burstsr_dataset.py](util_scripts/download_burstsr_dataset.py) script. 
+**Preparation:** The dataset has been split into 10 parts and can be downloaded from [here](https://drive.google.com/drive/folders/1A8FytFrYP-y7pZZhfFxVRzEPwcKl-Cp7?usp=drive_link). 
 Set the `burstsr_dir` variable in [admin/local.py](admin/local.py) to point to the unpacked BurstSR dataset directory.
 
 </details>
 
 
-<details>
-<summary><b>BurstSR dataset (full)</b></summary> 
-
-The BurstSR dataset containing RAW bursts captured from Samsung Galaxy S8 and corresponding HR ground truths captured using a DSLR camera. 
-This is the raw version of the dataset containing the full burst images in dng format.
-
-
-**Preparation:** The dataset can be downloaded and unpacked using the [util_scripts/download_raw_burstsr_data.py](util_scripts/download_raw_burstsr_data.py) script. 
-
-</details>
 
 ## Evaluation
 You can run the trained model on RAW bursts to generate HR RGB images and compute the quality of predictions using the 
